@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/moviemagic/static/css/main.073c9b0a.css",
+    "main.js": "/moviemagic/static/js/main.f10fc88f.js",
+    "static/js/787.7c42db31.chunk.js": "/moviemagic/static/js/787.7c42db31.chunk.js",
+    "static/media/logo.svg": "/moviemagic/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/moviemagic/index.html",
+    "main.073c9b0a.css.map": "/moviemagic/static/css/main.073c9b0a.css.map",
+    "main.f10fc88f.js.map": "/moviemagic/static/js/main.f10fc88f.js.map",
+    "787.7c42db31.chunk.js.map": "/moviemagic/static/js/787.7c42db31.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.f10fc88f.js"
+  ]
+}
