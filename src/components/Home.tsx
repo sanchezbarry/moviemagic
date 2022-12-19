@@ -21,7 +21,8 @@ type Movie = {
   };
 
   function useMovies() {
-    const [movies, setMovies] = useState<Movie[]>([]);
+    const [movies, setMovies] = useState<Movie[]>([])
+
     
     useEffect(() => {
       async function fetchMovies() {
@@ -39,6 +40,12 @@ type Movie = {
 const Home = () => {
     const movies = useMovies();
 
+    //filter functions
+    // const [year,setYear]=useState('')
+    // const handleSelect=(eventKey: any, e?: React.SyntheticEvent<{}>)=>{
+    //   console.log(e);
+    //   setYear(e)
+    // }
 
     return (
     <>  
@@ -71,7 +78,7 @@ const Home = () => {
         <br/>
         <h6>{movie.genre}</h6>
         <p>{movie.synopsisShort}</p>
-        <Link to={`/${movie.name}`}>View</Link>
+        <Link to={`/MovieViewPage/${movie.name}`}>View</Link>
         </Col>
       
       ))}

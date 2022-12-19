@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Link} from 'react-router-dom';
-import Main from './Main';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -26,7 +25,7 @@ export default function App() {
     <div className="App">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Movie Magic</Navbar.Brand>
+          <Navbar.Brand href="/">Movie Magic</Navbar.Brand>
           <Nav className="me-auto">
           </Nav>
         </Container>
@@ -34,7 +33,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:id" element={<MovieViewPage />} />
+        <Route path="/MovieViewPage/:id" element={<MovieViewPage />} />
       </Routes>
     </div>
 

@@ -34,14 +34,19 @@ type Movie = {
   const MovieViewPage = () => {
     const movies = useMovies();
     const params = useParams();
+    console.log("params: " + JSON.stringify(params))
+    const conditionalParams = params.id
+    console.log(conditionalParams)
 
 
 
     return (   
       <>
       {movies.map(movie =>  
-      (
+      ( 
+        movie.name === conditionalParams
         
+        ?
         <Col>
         <h3 key={movie.id}>{movie.name}</h3>
         <h5>{movie.id}</h5>
@@ -51,7 +56,7 @@ type Movie = {
         <p>{movie.synopsisShort}</p>
         <Link to={`/${movie.name}`}>View</Link>
         </Col>
-      
+        : null
       ))}
       <div>
         Movie Title: {JSON.stringify(params)}
