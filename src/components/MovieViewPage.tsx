@@ -54,13 +54,11 @@ type Movie = {
         <br/>
         <h6>{movie.genre}</h6>
         <p>{movie.synopsisShort}</p>
-        <Link to={`/${movie.name}`}>View</Link>
+        <Link to="/moviemagic">Back</Link>
         </Col>
         : null
       ))}
-      <div>
-        Movie Title: {JSON.stringify(params)}
-      </div>
+
       </>
     )
   }

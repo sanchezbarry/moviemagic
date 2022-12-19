@@ -78,7 +78,7 @@ const Home = () => {
         <br/>
         <h6>{movie.genre}</h6>
         <p>{movie.synopsisShort}</p>
-        <Link to={`/MovieViewPage/${movie.name}`}>View</Link>
+        <Link to={`MovieViewPage/${movie.name}`}>View</Link>
         </Col>
       
       ))}

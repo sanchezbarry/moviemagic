@@ -25,15 +25,15 @@ export default function App() {
     <div className="App">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">Movie Magic</Navbar.Brand>
+          <Navbar.Brand href="/moviemagic">Movie Magic</Navbar.Brand>
           <Nav className="me-auto">
           </Nav>
         </Container>
       </Navbar>
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/MovieViewPage/:id" element={<MovieViewPage />} />
+        <Route path="/moviemagic" element={<Home />} />
+        <Route path="moviemagic/MovieViewPage/:id" element={<MovieViewPage />} />
       </Routes>
     </div>
 
