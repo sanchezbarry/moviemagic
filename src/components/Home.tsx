@@ -71,22 +71,6 @@ const Home = () => {
 
         </Container>
 
-        {/* <DropdownButton id="dropdown-basic-button" title="Filter By Year" onChange={handleSelect}>
-        <Dropdown.Item eventKey="option-1" href="#/action-1">2003</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">2006</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">2010</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">2013</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">2015</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">2016</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">2018</Dropdown.Item>
-      </DropdownButton>
-
-      <DropdownButton id="dropdown-basic-button" title="Filter By Genre">
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Animation</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Comedy</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Fantasy</Dropdown.Item>
-      </DropdownButton> */}
 
       <Container>
       <Row>
