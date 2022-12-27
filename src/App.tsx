@@ -13,6 +13,8 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import { Routes, Route } from 'react-router-dom'
 import Home from './components/Home';
 import MovieViewPage from './components/MovieViewPage';
+import YearFilter from './components/YearFilter';
+import GenreFilter from './components/GenreFilter';
 
 
 
@@ -34,6 +36,8 @@ export default function App() {
       <Routes>
         <Route path="/moviemagic" element={<Home />} />
         <Route path="moviemagic/MovieViewPage/:id" element={<MovieViewPage />} />
+        <Route path="moviemagic/YearFilter/:id" element={<YearFilter />} />
+        <Route path="moviemagic/GenreFilter/:id" element={<GenreFilter />} />
       </Routes>
     </div>
 

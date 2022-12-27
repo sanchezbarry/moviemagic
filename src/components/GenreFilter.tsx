@@ -10,7 +10,7 @@ import Button from 'react-bootstrap/Button';
 type Movie = {
     id: string;
     name: string;
-    productionYear: number;
+    productionYear: string;
     genre: string;
     synopsisShort: string;
     synopsis: string;
@@ -32,20 +32,20 @@ type Movie = {
     return movies;
   }  
 
-  const MovieViewPage = () => {
+  const GenreFilter = () => {
     const movies = useMovies();
     const params = useParams();
     console.log("params: " + JSON.stringify(params))
     const conditionalParams = params.id
-    console.log(conditionalParams)
-
+    console.log("conditionalParams: " + conditionalParams)
+    console.log(typeof conditionalParams)
 
 
     return (   
       <>
       {movies.map(movie =>  
       ( 
-        movie.name === conditionalParams
+        movie.genre === conditionalParams
         
         ?
         <Col>
@@ -54,7 +54,7 @@ type Movie = {
         <em>{movie.productionYear}</em>
         <br/>
         <h6>{movie.genre}</h6>
-        <p>{movie.synopsis}</p>
+        <p>{movie.synopsisShort}</p>
         <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to="/moviemagic">Back</Link></Button>
         </Col>
         : null
@@ -64,4 +64,4 @@ type Movie = {
     )
   }
 
-export default MovieViewPage;
+export default GenreFilter;

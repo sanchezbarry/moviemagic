@@ -8,8 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+
 
 type Movie = {
     id: string;
@@ -40,17 +40,39 @@ type Movie = {
 const Home = () => {
     const movies = useMovies();
 
-    //filter functions
-    // const [year,setYear]=useState('')
-    // const handleSelect=(eventKey: any, e?: React.SyntheticEvent<{}>)=>{
-    //   console.log(e);
-    //   setYear(e)
-    // }
+
 
     return (
     <>  
-        <DropdownButton id="dropdown-basic-button" title="Filter By Year">
-        <Dropdown.Item href="#/action-1">2003</Dropdown.Item>
+
+      <Container>
+        <Row>
+          <ButtonGroup aria-label="year filter">
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"YearFilter/2003"}>2003</Link></Button>
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"YearFilter/2006"}>2006</Link></Button>
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"YearFilter/2010"}>2010</Link></Button>
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"YearFilter/2013"}>2013</Link></Button>
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"YearFilter/2015"}>2015</Link></Button>
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"YearFilter/2016"}>2016</Link></Button>
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"YearFilter/2018"}>2018</Link></Button>
+          </ButtonGroup>
+        </Row>
+
+
+        <Row>
+          <ButtonGroup aria-label="genre filter">
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"GenreFilter/Action"}>Action</Link></Button>
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"GenreFilter/Adventure"}>Adventure</Link></Button>
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"GenreFilter/Animation"}>Animation</Link></Button>
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"GenreFilter/Comedy"}>Comedy</Link></Button>
+            <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={"GenreFilter/Fantasy"}>Fantasy</Link></Button>
+          </ButtonGroup>
+        </Row>
+
+        </Container>
+
+        {/* <DropdownButton id="dropdown-basic-button" title="Filter By Year" onChange={handleSelect}>
+        <Dropdown.Item eventKey="option-1" href="#/action-1">2003</Dropdown.Item>
         <Dropdown.Item href="#/action-2">2006</Dropdown.Item>
         <Dropdown.Item href="#/action-3">2010</Dropdown.Item>
         <Dropdown.Item href="#/action-3">2013</Dropdown.Item>
@@ -64,7 +86,7 @@ const Home = () => {
         <Dropdown.Item href="#/action-2">Animation</Dropdown.Item>
         <Dropdown.Item href="#/action-3">Comedy</Dropdown.Item>
         <Dropdown.Item href="#/action-3">Fantasy</Dropdown.Item>
-      </DropdownButton>
+      </DropdownButton> */}
 
       <Container>
       <Row>
@@ -78,7 +100,7 @@ const Home = () => {
         <br/>
         <h6>{movie.genre}</h6>
         <p>{movie.synopsisShort}</p>
-        <Link to={`MovieViewPage/${movie.name}`}>View</Link>
+        <Button variant="secondary"><Link style={{ color: 'white', textDecoration: 'none'}} to={`MovieViewPage/${movie.name}`}>View</Link></Button>
         </Col>
       
       ))}
